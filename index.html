@@ -22,10 +22,34 @@
       color: var(--text);
       line-height: 1.6;
     }
-    .wrap { max-width: 640px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 1.5rem 1.5rem 3rem; }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 3rem;
+    }
+    nav img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: block;
+    }
+    .brand {
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    nav .nav-support {
+      margin-left: auto;
+      font-size: 0.95rem;
+    }
     header { text-align: center; margin-bottom: 2.5rem; }
     h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     .tagline { color: var(--muted); font-size: 1.1rem; }
+    .store-badge { display: inline-block; margin-top: 1.5rem; }
+    .store-badge img { height: 54px; display: block; }
     .card {
       background: var(--card);
       border-radius: 16px;
@@ -47,9 +71,18 @@
 </head>
 <body>
   <div class="wrap">
+    <nav>
+      <img src="/apple-touch-icon.png" alt="Kopfschmerzerl App-Icon">
+      <a class="brand" href="/">Kopfschmerzerl</a>
+      <a class="nav-support" href="mailto:support@kopfschmerzkalender.com">Support</a>
+    </nav>
     <header>
       <h1>Kopfschmerzerl</h1>
       <p class="tagline">Kopfschmerz- und Migränetage in Sekunden erfassen. Für iPhone.</p>
+      <!-- TODO: App-Store-Link nach Livegang eintragen -->
+      <a class="store-badge" href="#">
+        <img src="/app-store-badge.svg" alt="Laden im App Store">
+      </a>
     </header>
 
     <div class="card">
