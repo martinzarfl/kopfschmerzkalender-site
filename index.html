@@ -9,8 +9,11 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <style>
     :root {
-      --bg: #DFEDFB;
-      --card: #ffffff;
+      --bg: #ffffff;
+      --card: #1c2b3a;
+      --card-text: #ffffff;
+      --card-muted: rgba(255, 255, 255, 0.85);
+      --card-link: #bfdbf7;
       --text: #1c2b3a;
       --muted: #5a6b7d;
       --accent: #2b6cb0;
@@ -43,8 +46,11 @@
     }
     nav .nav-support {
       margin-left: auto;
-      font-size: 0.95rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
     }
+    nav .nav-support svg { width: 22px; height: 22px; }
     header { text-align: center; margin-bottom: 2.5rem; }
     h1 { font-size: 2rem; margin-bottom: 0.5rem; }
     .tagline { color: var(--muted); font-size: 1.1rem; }
@@ -52,13 +58,15 @@
     .store-badge img { height: 54px; display: block; }
     .card {
       background: var(--card);
+      color: var(--card-text);
       border-radius: 16px;
       padding: 1.5rem;
       margin-bottom: 1.25rem;
-      box-shadow: 0 1px 3px rgba(28, 43, 58, 0.08);
+      box-shadow: 0 2px 6px rgba(28, 43, 58, 0.2);
     }
     .card h2 { font-size: 1.15rem; margin-bottom: 0.5rem; }
-    .card p { color: var(--muted); }
+    .card p { color: var(--card-muted); }
+    .card a { color: var(--card-link); }
     a { color: var(--accent); }
     footer {
       text-align: center;
@@ -74,7 +82,12 @@
     <nav>
       <img src="/apple-touch-icon.png" alt="Kopfschmerzerl App-Icon">
       <a class="brand" href="/">Kopfschmerzerl</a>
-      <a class="nav-support" href="mailto:support@kopfschmerzkalender.com">Support</a>
+      <a class="nav-support" href="mailto:support@kopfschmerzkalender.com" aria-label="Support-E-Mail schreiben" title="Support">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect>
+          <path d="M3.5 6.5 12 13l8.5-6.5"></path>
+        </svg>
+      </a>
     </nav>
     <header>
       <h1>Kopfschmerzerl</h1>
